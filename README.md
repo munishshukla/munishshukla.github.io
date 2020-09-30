@@ -1,6 +1,19 @@
+# static-site-boilerplate-with-react-ts-webpack
 
-A demonstration boilerplate for generating a static with with React and webpack
+![Node.js CI](https://github.com/nabeliwo/static-site-boilerplate-with-react-ts-webpack/workflows/Node.js%20CI/badge.svg)
 
-http://jxnblk.com/writing/posts/static-site-generation-with-react-and-webpack/
+static site boilerplate.
 
-MIT License
+## Technology stack
+
+- TypeScript
+- Webpack
+- React
+- ReactDOM
+
+## Webpack
+
+- development
+  - webpack-dev-server
+- production
+  - static build

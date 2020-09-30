@@ -1,20 +1,17 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom';
+import { AppContainer as ReactHotAppContainer } from 'react-hot-loader';
 
-import { App } from './App'
+const AppContainer =  ReactHotAppContainer;
 
-const render = (AppComponent: typeof App) => {
-  ReactDOM.render(
-    <AppComponent title="Hello, World" />,
-    document.getElementById('root'),
-  )
-}
-
-render(App)
-
-if (module.hot) {
-  module.hot.accept('./App', () => {
-    const { App: AppComponent }: { App: typeof App } = require('./App')
-    render(AppComponent)
-  })
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const Root = require('./Root.tsx').default;
+  console.log("==---------------Root---------");
+  console.log(Root);
+  render(
+    <AppContainer>
+      <Root />
+    </AppContainer>,
+    document.getElementById('root')
+  );
+});

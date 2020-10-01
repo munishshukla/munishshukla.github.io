@@ -14,7 +14,6 @@ export default function App(props) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline/>
-
       <Header />
       {children}
     </ThemeProvider>

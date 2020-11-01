@@ -83,10 +83,10 @@ export default function Header(props) {
           <Typography variant="h6" className={classes.title}>
             Munish Shukla
           </Typography>
+          <Button color="inherit">Home</Button>
+          {/* <Button color="inherit">Login</Button>
           <Button color="inherit">Login</Button>
-          <Button color="inherit">Login</Button>
-          <Button color="inherit">Login</Button>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit">Login</Button> */}
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />

@@ -6,8 +6,8 @@ import {
   Button,
   Hidden,
   Avatar,
-  Grow,
-  IconButton,
+  // Grow,
+  // IconButton,
 } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
 
@@ -19,13 +19,15 @@ import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
 import Location from "@material-ui/icons/Room";
+// import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
+// import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardHeader from "@material-ui/core/CardHeader";
+import Icon from "@material-ui/core/Icon";
 
 import SocialIcon from "../../component/social-media/index";
 // import banner from "../../resources/home.svg";
@@ -44,6 +46,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(10),
+  },
+  headingPadding: {
+    paddingBottom: theme.spacing(7),
   },
   extraPadding: {
     paddingBottom: theme.spacing(10),
@@ -68,53 +73,120 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(30),
     // padding: theme.spacing(2),
   },
+  avtarbanner: {
+    width: theme.spacing(52),
+    height: theme.spacing(52),
+    // padding: theme.spacing(2),
+  },
+  rootGridList: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    overflow: "hidden",
+  },
+  gridList: {
+    width: 1200,
+    height: 450,
+  },
+  hoverEffect: {
+    "&:hover": {
+      color: theme.palette.secondary.main,
+    },
+  },
 }));
 
 function Home() {
   const classes = useStyles();
+  const language = [
+    { name: "HTML", icon: "fab fa-html5" },
+    { name: "CSS", icon: "fab fa-css3-alt" },
+    { name: "Sass", icon: "fab fa-sass" },
+    { name: "JavaScript", icon: "fab fa-js" },
+    { name: "React Js", icon: "fab fa-react" },
+    { name: "AngularJs", icon: "fab fa-angular" },
+    { name: "Node Js", icon: "fab fa-node" },
+    { name: "Electron Js", icon: "fa fa-atom" },
+    { name: "PHP", icon: "fab fa-php" },
+    { name: "Wordpress", icon: "fab fa-wordpress" },
+    { name: "Python", icon: "fab fa-python" },
+    { name: "C++", icon: "fab fa-cuttlefish" },
+    { name: "MySql", icon: "fa fa-database" },
+    { name: "Mongo DB", icon: "fa fa-server" },
+    { name: "ElasticSearch", icon: "fab fa-searchengin" },
+    { name: "Docker", icon: "fab fa-docker" },
+    { name: "NPM", icon: "fab fa-npm" },
+  ];
   return (
     <>
       <Grid container className={classes.root} justify="space-between">
-        <Grid item lg={7} md={7} sm={7} xs={12}>
+        <Grid item lg={8} md={8} sm={8} xs={12} className={classes.paper}>
           <Paper className={classes.paper}>
             <Typography variant="h3" component="h2" gutterBottom>
-              Hi all i'm Munish
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-              body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore
-              consectetur, neque doloribus, cupiditate numquam dignissimos
-              laborum fugiat deleniti? Eum quasi quidem quibusdam.
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-              body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore
-              consectetur, neque doloribus, cupiditate numquam dignissimos
-              laborum fugiat deleniti? Eum quasi quidem quibusdam.
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-              body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore
-              consectetur, neque doloribus, cupiditate numquam dignissimos
-              laborum fugiat deleniti? Eum quasi quidem quibusdam.
+              Hi all i'm Munish{" "}
+              <Icon
+                color="secondary"
+                fontSize="inherit"
+                className="fa fa-hand-spock"
+              ></Icon>
             </Typography>
 
-            <SocialIcon />
-            <section>
-              <Button variant="contained" color="primary" size="large">
-                Primary
-              </Button>
-            </section>
+            <Typography variant="body1" gutterBottom>
+              An aspiring Software Developer having 4+ years of experience in
+              software development. I worked with various product-based software
+              firms as a software/ desktop application developer
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              An integral part of this particular vocational sector is that it
+              evolves faster than any other. As a result, I make sure not to
+              stick to a particular technology, and to widen my knowledge, so
+              that I am always ready to be standing next to the state of the art
+              technology. As a result, I have worked on various technologies
+              such as PHP, Python, JAVA, etc.
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              My current niche lies with building applications with javascript
+              and using technologies/frameworks such as NodeJs, ElectronJs,
+              React-Native, ReactJs, TypeScript, Redux, and docker, etc.
+            </Typography>
+            <Grid container justify="space-between">
+              <section style={{ marginTop: "2vh" }}>
+                <SocialIcon />
+              </section>
+              <section style={{ marginTop: "2vh" }}>
+                <a
+                  href=" https://drive.google.com/file/d/1QKNZJXZqk_lS95u2l1l_zG3dYLHnScBQ/view?usp=sharing"
+                  target="_blank"
+                >
+                  <Button variant="contained" color="primary" size="large">
+                    See My Resume
+                  </Button>
+                </a>
+              </section>
+            </Grid>
           </Paper>
         </Grid>
-        <Grid item lg={5} md={5} sm={5} xs={12}>
+        <Grid item lg={4} md={4} sm={4} xs={12}>
           <Hidden only={["xs"]}>
-            <img src={banner} alt="Munish Shukla" width="100%" />
+            {/* <img
+              src={banner}
+              alt="Munish Shukla"
+              width="100%"
+              style={{ objectFit: "cover" }}
+            /> */}
+            <Grid container justify="center">
+              <Avatar className={classes.avtarbanner} src={banner} />
+            </Grid>
           </Hidden>
         </Grid>
       </Grid>
-
       <Grid container justify="center" className={classes.root}>
+        <Grid item lg={12} md={12} sm={12} xs={12}>
+          <Grid container justify="center" className={classes.headingPadding}>
+            <Typography variant="h3" component="h2" gutterBottom>
+              Experience
+            </Typography>
+          </Grid>
+        </Grid>
         <Grid item lg={12} md={12} sm={12} xs={12}>
           <Timeline align="alternate">
             <TimelineItem>
@@ -261,8 +333,42 @@ function Home() {
           </Timeline>
         </Grid>
       </Grid>
-
+      <Grid container justify="center" className={classes.root} spacing={2}>
+        <Grid item lg={12} md={12} sm={12} xs={12}>
+          <Grid container justify="center" className={classes.headingPadding}>
+            <Typography variant="h3" component="h2" gutterBottom>
+              What I do
+            </Typography>
+          </Grid>
+        </Grid>
+        {language.map((val) => (
+          <Grid item key={val.name} lg={2} md={2} sm={2} xs={5}>
+            <Grid
+              container
+              direction="column"
+              justify="center"
+              alignItems="center"
+              className={classes.hoverEffect}
+            >
+              <i
+                title={val.name}
+                className={val.icon}
+                style={{ fontSize: "17vh" }}
+              />
+              <Typography variant="caption">{val.name}</Typography>
+            </Grid>
+          </Grid>
+        ))}
+      </Grid>
       <Grid container justify="space-evenly" className={classes.root}>
+        <Grid item lg={12} md={12} sm={12} xs={12}>
+          <Grid container justify="center" className={classes.headingPadding}>
+            <Typography variant="h3" component="h2" gutterBottom>
+              Projects
+            </Typography>
+          </Grid>
+        </Grid>
+
         <Grid item lg={3} md={3} sm={3} xs={12}>
           <Card>
             <CardHeader
@@ -279,7 +385,7 @@ function Home() {
             <CardMedia
               component="img"
               alt="Contemplative Reptile"
-              height="140"
+              height="190"
               image={xlpatBanner}
               title="Contemplative Reptile"
             />
@@ -295,8 +401,8 @@ function Home() {
             </CardContent>
             <CardActions>
               <a href="https://www.xlpat.com/" target="_blank">
-                <Button size="small" color="primary">
-                  Website
+                <Button variant="contained" size="small" color="primary">
+                  View Website
                 </Button>
               </a>
             </CardActions>
@@ -318,7 +424,7 @@ function Home() {
             <CardMedia
               component="img"
               alt="Novelty Checker"
-              height="140"
+              height="190"
               image={noveltyBanner}
               title="Novelty Checker"
             />
@@ -333,8 +439,8 @@ function Home() {
             </CardContent>
             <CardActions>
               <a href="https://en.xlpat.com/novelty-checker/" target="_blank">
-                <Button size="small" color="primary">
-                  Website
+                <Button variant="contained" size="small" color="primary">
+                  View Website
                 </Button>
               </a>
             </CardActions>
@@ -356,7 +462,7 @@ function Home() {
             <CardMedia
               component="img"
               alt="Stackabl"
-              height="140"
+              height="190"
               image={stackablBanner}
               title="Stackabl"
             />
@@ -372,28 +478,35 @@ function Home() {
             </CardContent>
             <CardActions>
               <a href="http://stackabl.io/" target="_blank">
-                <Button size="small" color="primary">
-                  Website
+                <Button variant="contained" size="small" color="primary">
+                  View Website
                 </Button>
               </a>
             </CardActions>
           </Card>
         </Grid>
       </Grid>
-
       <Grid container justify="space-between" className={classes.root}>
         <Grid item lg={8} md={8} sm={8} xs={12}>
           <Grid container className={classes.gridItem}>
             <Typography variant="h3" component="h2" gutterBottom>
               Reach Out to me!
             </Typography>
-            <Typography variant="body1" gutterBottom>
-              body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore
-              consectetur, neque doloribus, cupiditate numquam dignissimos
-              laborum fugiat deleniti? Eum quasi quidem quibusdam.
+            <Typography variant="subtitle1" gutterBottom>
+              DISCUSS A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR ALL
             </Typography>
-            <SocialIcon />
+            <Typography variant="h5" gutterBottom>
+              Aspiring Software Developer | Crypoto Enthusiast | Stock Trader |
+              Data Enthusiast | Anime
+            </Typography>
+
+            <Grid container direction="row" style={{ marginTop: "2vh" }}>
+              <Icon className="fa fa-map-marker-alt"></Icon>
+              <Typography variant="subtitle1">Punjab, India</Typography>
+            </Grid>
+            <Grid container direction="row" style={{ marginTop: "2vh" }}>
+              <SocialIcon />
+            </Grid>
           </Grid>
         </Grid>
         <Grid item lg={3} md={3} sm={3} xs={12}>
